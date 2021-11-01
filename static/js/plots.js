@@ -1,7 +1,5 @@
 // Use D3 library to read in samples.json
 
-
-
 function buildMetadata(sample) {
     d3.json("data/samples.json").then(function(data) {
         var metadata = data.metadata;
@@ -40,7 +38,7 @@ function buildCharts(sample) {
 
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
-        margin: { t: 30, l: 150 }
+        // margin: { t: 40, l: 150 }
       };
     
       Plotly.newPlot("bar", bar_data, barLayout);
