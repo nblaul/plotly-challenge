@@ -13,7 +13,7 @@ function buildMetadata(sample) {
         });
     });
 }
-
+// create a function to build the charts
 function buildCharts(sample) {
     d3.json("data/samples.json").then((data) => {
         var samples = data.samples;
@@ -38,7 +38,6 @@ function buildCharts(sample) {
 
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
-        // margin: { t: 40, l: 150 }
       };
     
       Plotly.newPlot("bar", bar_data, barLayout);
@@ -70,10 +69,10 @@ function buildCharts(sample) {
 }
 
 function init() {
-    // Grab a reference to the dropdown select element
+    // select the dropdown select element
     var selector = d3.select("#selDataset");
     
-    // Use the list of sample names to populate the select options
+    // Use the list of sample names to populate the dropdown options
     d3.json("data/samples.json").then((data) => {
         var sampleNames = data.names;
         sampleNames.forEach((sample) => {
